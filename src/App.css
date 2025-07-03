@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 1rem; /* Add this for better spacing on small screens */
 }
 
 /* App container */
@@ -21,4 +22,25 @@ body {
   max-width: 600px;
   width: 100%;
   text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+  .App {
+    padding: 1rem;
+    border-width: 1px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
