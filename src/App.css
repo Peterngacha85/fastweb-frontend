@@ -13,19 +13,30 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
+
 
 header {
   background-color: #fff;
-  padding: 1rem 2rem;
+  padding: 1.5rem 0 0.5rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 header h1 {
   color: #8a4efb;
   margin: 0 0 1rem 0;
   font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: center;
+  width: 100%;
 }
 
 main {
@@ -48,25 +59,20 @@ main {
 /* Responsive styles for mobile */
 @media (max-width: 600px) {
   header {
-    padding: 1rem;
+    padding: 1rem 0 0.5rem 0;
   }
-
   header h1 {
     font-size: 1.8rem;
   }
-
   main {
     padding: 1rem;
   }
-
   .content-section {
     padding: 1rem;
   }
-
   h2 {
     font-size: 1.25rem;
   }
-
   p {
     font-size: 1rem;
   }

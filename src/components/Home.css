@@ -1,18 +1,19 @@
 .home {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 .home h2 {
   color: #333;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .home p {
   color: #666;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .cta-buttons {
@@ -57,17 +58,22 @@
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+  justify-items: center;
 }
 
 .feature-card {
   background-color: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  min-height: 180px;
 }
 
 .feature-card:hover {
@@ -92,5 +98,90 @@
   
   .features {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .home {
+    padding: 2.5rem 2vw;
+  }
+  .home-content {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 2vw;
+  }
+  .features {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 100vw;
+  }
+  .feature-card {
+    min-height: 200px;
+    padding: 2rem;
+  }
+  .home h2 {
+    font-size: 2.5rem;
+  }
+  .home p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .home {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 3rem 0;
+    background: #f3f4f6;
+  }
+  .home-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .features {
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .feature-card {
+    min-height: 240px;
+    padding: 2.5rem;
+  }
+  .home h2 {
+    font-size: 2.8rem;
+  }
+  .home p {
+    font-size: 1.3rem;
+  }
+  .cta-buttons {
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home {
+    padding: 3rem 6rem;
+  }
+  .cta-buttons {
+    gap: 2rem;
+  }
+  .feature-card {
+    min-height: 240px;
+    padding: 2.5rem;
   }
 }
