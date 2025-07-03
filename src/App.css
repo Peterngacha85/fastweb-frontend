@@ -5,35 +5,62 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f3f4f6;
   color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  padding: 1rem; /* Add this for better spacing on small screens */
 }
 
 /* App container */
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
   background-color: #fff;
-  border: 2px solid #8a4efb;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
-  max-width: 600px;
-  width: 100%;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: all 0.3s ease-in-out;
+}
+
+header h1 {
+  color: #8a4efb;
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-section {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
 }
 
 /* Responsive styles for mobile */
 @media (max-width: 600px) {
-  .App {
+  header {
     padding: 1rem;
-    border-width: 1px;
   }
 
-  h1 {
-    font-size: 1.5rem;
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .content-section {
+    padding: 1rem;
   }
 
   h2 {
